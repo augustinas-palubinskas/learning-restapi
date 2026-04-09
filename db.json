@@ -6,7 +6,7 @@
       "email": "john.doe@example.com",
       "firstName": "John",
       "lastName": "Doe",
-      "role": "asdadadmin",
+      "role": "admin",
       "isActive": true,
       "createdAt": "2024-01-15T10:30:00Z",
       "department": "Engineering"
