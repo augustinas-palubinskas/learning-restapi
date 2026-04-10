@@ -105,19 +105,39 @@
   "orders": [
     {
       "id": 1,
-      "userId": 1,
+      "user": {
+        "id": 1,
+        "username": "john_doe",
+        "email": "john.doe@example.com",
+        "firstName": "John",
+        "lastName": "Doe",
+        "role": "admin",
+        "department": "Engineering"
+      },
       "orderDate": "2024-03-15T10:30:00Z",
       "status": "delivered",
       "totalAmount": 1379.98,
       "shippingAddress": "123 Main St, New York, NY 10001",
       "items": [
         {
-          "productId": 1,
+          "product": {
+            "id": 1,
+            "name": "Laptop Pro 15",
+            "category": "Electronics",
+            "price": 1299.99,
+            "brand": "TechBrand"
+          },
           "quantity": 1,
           "price": 1299.99
         },
         {
-          "productId": 2,
+          "product": {
+            "id": 2,
+            "name": "Wireless Mouse",
+            "category": "Accessories",
+            "price": 29.99,
+            "brand": "PeripheralCo"
+          },
           "quantity": 2,
           "price": 29.99
         }
@@ -125,19 +145,39 @@
     },
     {
       "id": 2,
-      "userId": 2,
+      "user": {
+        "id": 2,
+        "username": "jane_smith",
+        "email": "jane.smith@example.com",
+        "firstName": "Jane",
+        "lastName": "Smith",
+        "role": "user",
+        "department": "Marketing"
+      },
       "orderDate": "2024-03-20T14:22:00Z",
       "status": "shipped",
       "totalAmount": 439.98,
       "shippingAddress": "456 Oak Ave, Los Angeles, CA 90001",
       "items": [
         {
-          "productId": 5,
+          "product": {
+            "id": 5,
+            "name": "27-inch Monitor",
+            "category": "Electronics",
+            "price": 349.99,
+            "brand": "DisplayPro"
+          },
           "quantity": 1,
           "price": 349.99
         },
         {
-          "productId": 3,
+          "product": {
+            "id": 3,
+            "name": "Mechanical Keyboard RGB",
+            "category": "Accessories",
+            "price": 89.99,
+            "brand": "PeripheralCo"
+          },
           "quantity": 1,
           "price": 89.99
         }
@@ -145,14 +185,28 @@
     },
     {
       "id": 3,
-      "userId": 1,
+      "user": {
+        "id": 1,
+        "username": "john_doe",
+        "email": "john.doe@example.com",
+        "firstName": "John",
+        "lastName": "Doe",
+        "role": "admin",
+        "department": "Engineering"
+      },
       "orderDate": "2024-04-01T11:00:00Z",
       "status": "processing",
       "totalAmount": 89.99,
       "shippingAddress": "123 Main St, New York, NY 10001",
       "items": [
         {
-          "productId": 3,
+          "product": {
+            "id": 3,
+            "name": "Mechanical Keyboard RGB",
+            "category": "Accessories",
+            "price": 89.99,
+            "brand": "PeripheralCo"
+          },
           "quantity": 1,
           "price": 89.99
         }
@@ -160,24 +214,50 @@
     },
     {
       "id": 4,
-      "userId": 4,
+      "user": {
+        "id": 4,
+        "username": "alice_williams",
+        "email": "alice.williams@example.com",
+        "firstName": "Alice",
+        "lastName": "Williams",
+        "role": "moderator",
+        "department": "Engineering"
+      },
       "orderDate": "2024-04-05T16:30:00Z",
       "status": "pending",
       "totalAmount": 1679.97,
       "shippingAddress": "789 Pine Rd, Chicago, IL 60601",
       "items": [
         {
-          "productId": 1,
+          "product": {
+            "id": 1,
+            "name": "Laptop Pro 15",
+            "category": "Electronics",
+            "price": 1299.99,
+            "brand": "TechBrand"
+          },
           "quantity": 1,
           "price": 1299.99
         },
         {
-          "productId": 5,
+          "product": {
+            "id": 5,
+            "name": "27-inch Monitor",
+            "category": "Electronics",
+            "price": 349.99,
+            "brand": "DisplayPro"
+          },
           "quantity": 1,
           "price": 349.99
         },
         {
-          "productId": 2,
+          "product": {
+            "id": 2,
+            "name": "Wireless Mouse",
+            "category": "Accessories",
+            "price": 29.99,
+            "brand": "PeripheralCo"
+          },
           "quantity": 1,
           "price": 29.99
         }
@@ -187,8 +267,19 @@
   "reviews": [
     {
       "id": 1,
-      "productId": 1,
-      "userId": 1,
+      "product": {
+        "id": 1,
+        "name": "Laptop Pro 15",
+        "category": "Electronics",
+        "price": 1299.99,
+        "brand": "TechBrand"
+      },
+      "user": {
+        "id": 1,
+        "username": "john_doe",
+        "firstName": "John",
+        "lastName": "Doe"
+      },
       "rating": 5,
       "title": "Excellent laptop for development",
       "comment": "Perfect for coding, great performance and battery life.",
@@ -197,8 +288,19 @@
     },
     {
       "id": 2,
-      "productId": 2,
-      "userId": 2,
+      "product": {
+        "id": 2,
+        "name": "Wireless Mouse",
+        "category": "Accessories",
+        "price": 29.99,
+        "brand": "PeripheralCo"
+      },
+      "user": {
+        "id": 2,
+        "username": "jane_smith",
+        "firstName": "Jane",
+        "lastName": "Smith"
+      },
       "rating": 4,
       "title": "Good value wireless mouse",
       "comment": "Works well, comfortable grip but could use better battery life.",
@@ -207,8 +309,19 @@
     },
     {
       "id": 3,
-      "productId": 3,
-      "userId": 4,
+      "product": {
+        "id": 3,
+        "name": "Mechanical Keyboard RGB",
+        "category": "Accessories",
+        "price": 89.99,
+        "brand": "PeripheralCo"
+      },
+      "user": {
+        "id": 4,
+        "username": "alice_williams",
+        "firstName": "Alice",
+        "lastName": "Williams"
+      },
       "rating": 5,
       "title": "Best keyboard I've owned",
       "comment": "The RGB lighting is amazing and the switches feel premium. Highly recommend!",
@@ -217,8 +330,19 @@
     },
     {
       "id": 4,
-      "productId": 5,
-      "userId": 2,
+      "product": {
+        "id": 5,
+        "name": "27-inch Monitor",
+        "category": "Electronics",
+        "price": 349.99,
+        "brand": "DisplayPro"
+      },
+      "user": {
+        "id": 2,
+        "username": "jane_smith",
+        "firstName": "Jane",
+        "lastName": "Smith"
+      },
       "rating": 4,
       "title": "Great monitor for the price",
       "comment": "Colors are vibrant, good build quality. Slight backlight bleed but acceptable.",
@@ -227,8 +351,19 @@
     },
     {
       "id": 5,
-      "productId": 1,
-      "userId": 4,
+      "product": {
+        "id": 1,
+        "name": "Laptop Pro 15",
+        "category": "Electronics",
+        "price": 1299.99,
+        "brand": "TechBrand"
+      },
+      "user": {
+        "id": 4,
+        "username": "alice_williams",
+        "firstName": "Alice",
+        "lastName": "Williams"
+      },
       "rating": 4,
       "title": "Solid performance",
       "comment": "Fast and reliable, only wish it had more ports.",
